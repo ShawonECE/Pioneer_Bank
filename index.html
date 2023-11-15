@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Pioneer Bank</title>
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +13,7 @@
         <br>
         <div class="card">
             <div class="card-body">
+                <!-- Log in setup isn't implemented yet -->
                 <h4 class="card-title mb-3">Login</h4>
                 <div class="mb-3">
                     <label for="email" class="form-label">Email address</label>
@@ -88,9 +89,9 @@
             txnArea.style.display = "block";
         });
 
-        var totalDeposit = parseFloat(document.getElementById("totalDeposit").innerText);
-        var totalWithdraw = parseFloat(document.getElementById("totalWithdraw").innerText);
-        var currentBalance = parseFloat(document.getElementById("currentBalance").innerText);
+        let totalDeposit = parseFloat(document.getElementById("totalDeposit").innerText);
+        let totalWithdraw = parseFloat(document.getElementById("totalWithdraw").innerText);
+        let currentBalance = parseFloat(document.getElementById("currentBalance").innerText);
         
         
         const depositBtn = document.getElementById("depositBtn");
@@ -98,7 +99,7 @@
         
 
         depositBtn.addEventListener("click", function(){
-            var currentDeposit = parseFloat(document.getElementById("deposit_money").value);
+            let currentDeposit = parseFloat(document.getElementById("deposit_money").value);
             currentBalance = currentBalance + currentDeposit;
             totalDeposit = totalDeposit + currentDeposit;
             document.getElementById("totalDeposit").innerText = totalDeposit;
@@ -107,7 +108,7 @@
         });
 
         withdrawBtn.addEventListener("click", function(){
-            var currentWithdraw = parseFloat(document.getElementById("withdraw_money").value);
+            let currentWithdraw = parseFloat(document.getElementById("withdraw_money").value);
             currentBalance = currentBalance - currentWithdraw;
             totalWithdraw = totalWithdraw + currentWithdraw;
             document.getElementById("totalWithdraw").innerText = totalWithdraw;
@@ -116,6 +117,6 @@
         });
         
     </script>
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
